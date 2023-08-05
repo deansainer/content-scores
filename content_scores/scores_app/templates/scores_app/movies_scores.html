@@ -1,0 +1,36 @@
+{% extends 'scores_app/main.html' %}<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+</head>
+<body>
+
+</body>
+</html>
+{% block body %}
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Release Year</th>
+      <th scope="col">Score</th>
+      <th scope="col">Category</th>
+      <th scope="col">Content Type</th>
+    </tr>
+  </thead>
+    {% for content in movies_list %}
+  <tbody>
+    <tr>
+      <th scope="row">{{content.id}}</th>
+      <td></td>
+      <td>{{content.name}}</td>
+      <td>{{content.release_year}}</td>
+      <td>{{content.category}}</td>
+      <td>{{content.content_type}}</td>
+       <td>{{content.score}}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
