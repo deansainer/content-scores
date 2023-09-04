@@ -10,7 +10,7 @@
 
 {% block body %}
 <div class="my_table">
-<table class="table-bordered table table-hover table-dark">
+<table style="text-align: center; width: 100%" class="table-bordered table table-hover table-dark">
   <thead>
     <tr>
       <th scope="col">ID</th>
@@ -24,12 +24,12 @@
     {% for content in movies_list %}
   <tbody>
     <tr>
-      <th scope="row">{{content.id}}</th>
-      <td>{{content.name}}</td>
-      <td>{{content.release_year}}</td>
-      <td>{{content.category}}</td>
-      <td>{{content.content_type}}</td>
-       <td>{{content.score}}</td>
+      <th style="width: 10%" scope="row">{{content.id}}</th>
+      <td style="width: 23%">{{content.name}}</td>
+      <td style="width: 20%">{{content.release_year}}</td>
+      <td style="width: 20%">{{content.category}}</td>
+      <td style="width: 20%">{{content.content_type}}</td>
+       <td style="width: 10%">{{content.score}}</td>
     </tr>
   {% endfor %}
   </tbody>
